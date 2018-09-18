@@ -11,4 +11,9 @@ class Mazo {
   public function cortar() {
     return TRUE;
   }
+
+	public function cantidadDeCartas(){
+		return 50;
+	}
+
 }
