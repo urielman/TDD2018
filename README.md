@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/dagostinoips/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/dagostinoips/TDD2018?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/dagostinoips/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/dagostinoips/TDD2018?branch=master) [![Coverage Status](https://coveralls.io/repos/github/urielman/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/urielman/TDD2018?branch=master)
 
 [![Build Status](https://travis-ci.org/dagostinoips/TDD2018.svg?branch=master)](https://travis-ci.org/dagostinoips/TDD2018)
 
