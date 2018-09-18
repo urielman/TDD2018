@@ -5,6 +5,6 @@ namespace TDD;
 class Mazo {
 
   public function mezclar() {
-
+    return TRUE;
   }
 }
