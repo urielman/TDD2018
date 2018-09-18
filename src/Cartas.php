@@ -16,7 +16,7 @@ class Cartas {
 	}
 
 	public function obtenerNumero(){
-		return $this->palo;
+		return $this->numero;
 	}
 
 }
