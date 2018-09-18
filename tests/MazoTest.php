@@ -24,9 +24,14 @@ class MazoTest extends TestCase {
 		$this->assertTrue($mazo->cortar());
 	}
 
-	public function testCantidadDeCartas{
+	public function testCantidadDeCartas(){
 		$mazo = new Mazo;
 		$this->assertEquals($mazo->cantidadDeCartas(), 50);
 	}
+
+	public function testExisteObjetoTarjeta(){
+		$carta = new Carta;
+        $this->assertTrue(isset($carta));
+	}	
 
 }
