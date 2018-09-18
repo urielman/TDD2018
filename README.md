@@ -1,5 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/dagostinoips/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/dagostinoips/TDD2018?branch=master) [![Coverage Status](https://coveralls.io/repos/github/urielman/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/urielman/TDD2018?branch=master)
 
+#Integrantes: Uriel Man y Lucas Pulvirenti
 # Consigna
 
 - Utilizando TDD.
