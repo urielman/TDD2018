@@ -10,10 +10,17 @@
 - Primero escribir luego hacer que falle (con travis).
 - Arreglarlo con código.
 
-# Functionalidades esperadas del mazo.
+# Funcionalidades esperadas del mazo.
 
 - Mezclar.
 - Cortar
 - Obtener cantidad de cartas.
 - Obtener una carta del mazo.
 - Inidicar si tiene cartas o no.
+- Agregar cartas al mazo.
+
+# Funcionalidades de una carta.
+
+- Ver palo.
+- Ver numero.
+- Tipo de cartas soportadas: Españolas y de Poker.
