@@ -12,11 +12,11 @@ class CartasTest extends TestCase {
 	}
 
 	public function testExisteObjetoEspañolas(){
-		$carta = new Españolas("trebol","7");
+		$carta = new Española("trebol","7");
         $this->assertTrue(isset($carta));
 	}
 
-	public function testVerPalo(){
+	public function testVerAtributos(){
 		$carta = new Poker("trebol", "10");
 		$this->assertEquals($carta->obtenerPalo(), "trebol");
 		$this->assertEquals($carta->obtenerNumero(), "10");
