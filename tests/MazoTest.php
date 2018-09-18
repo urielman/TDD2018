@@ -30,7 +30,7 @@ class MazoTest extends TestCase {
 	}
 
 	public function testExisteObjetoTarjeta(){
-		$carta = new Poker;
+		$carta = new Poker("trebol",10);
         $this->assertTrue(isset($carta));
 	}	
 
