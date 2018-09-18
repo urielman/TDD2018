@@ -29,10 +29,6 @@ class MazoTest extends TestCase {
 		$this->assertEquals($mazo->cantidadDeCartas(), 50);
 	}
 
-	public function testExisteObjetoTarjeta(){
-		$carta = new Poker("trebol",10);
-        $this->assertTrue(isset($carta));
-	}	
 
 	
 }
