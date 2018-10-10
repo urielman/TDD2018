@@ -4,12 +4,7 @@ namespace TDD;
 
 class Mazo {
 
-	cantidadCartas = 0;
-
-	public function __construct($cantidadCartas, $numero){
-		$this->cantidadCartas = $cantidadCartas;
-		$this->numero = $numero;
-	}
+	$cantidadCartas = 0;
 
 	public function mezclar() {
 		return TRUE;
