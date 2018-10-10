@@ -43,7 +43,7 @@ class MazoTest extends TestCase {
 		$this->assertTrue($mazo->agregarCarta($carta));		
 	}
 
-	public function testTieneCartas{
+	public function testTieneCartas(){
 		$mazo = new Mazo;
 		$this->assertFalse($mazo->tieneCartas());
 	}
