@@ -2,7 +2,7 @@
 
 namespace TDD;
 
-class Española extends Cartas{
+class Espanola extends Cartas{
 
 }
 

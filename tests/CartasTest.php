@@ -12,7 +12,7 @@ class CartasTest extends TestCase {
 	}
 
 	public function testExisteObjetoEspañolas(){
-		$carta = new Española("trebol","7");
+		$carta = new Espanola("trebol","7");
         $this->assertTrue(isset($carta));
 	}
 

@@ -39,7 +39,7 @@ class MazoTest extends TestCase {
 
 	public function testAgregarCarta(){
 		$mazo = new Mazo;
-		$carta = new Española("trebol","7");
+		$carta = new Espanola("trebol","7");
 		$this->assertTrue($mazo->agregarCarta($carta));		
 	}
 
