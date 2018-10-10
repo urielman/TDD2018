@@ -53,14 +53,21 @@ class MazoTest extends TestCase {
 
 	public function testMezclar(){
 		$mazo = new Mazo;
-		$carta = new Espanola("trebol","7");
+		$carta = new Espanola("trebol","4");
 		$carta2 = new Espanola("espada","1");
-		$this->assertTrue($mazo->agregarCarta($carta));	
-		$this->assertTrue($mazo->agregarCarta($carta2));
-		$this->assertEquals($mazo->cantidadDeCartas(), 2);
+		$carta3 = new Espanola("basto","1");
+		$carta4 = new Espanola("oro","7");
+	    $this->assertTrue($mazo->agregarCarta($carta));	
+        $this->assertTrue($mazo->agregarCarta($carta2));
+		$this->assertTrue($mazo->agregarCarta($carta3));
+		$this->assertTrue($mazo->agregarCarta($carta4));
+		$this->assertEquals($mazo->cantidadDeCartas(), 4);
 
+        $mazoPrueba = array($carta, $carta2, $carta3, $carta4);
+        $this->assertEquals($mazo->obtenerMazo, $mazoPrueba);
+        
 		$this->assertTrue($mazo->mezclar());
-
+        $this->assertNotEquals($mazo->obtenerMazo, $mazoPrueba);
 	}
 
 	public function testCortar(){
