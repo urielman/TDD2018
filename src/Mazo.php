@@ -51,7 +51,7 @@ class Mazo {
 
 			$cartasMezcladas = $this->cartas;
 		 	
-			if(shuffle($cartasMezcladas){
+			if(shuffle($cartasMezcladas)){
 
 			//me aseguro de que el mezclado no sea igual que la posicion original de las cartas
 	 		 	if($this->cartas == $cartasMezcladas) return $this->mezclar();
