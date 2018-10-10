@@ -8,14 +8,6 @@ class Mazo {
 
 	protected $cartas = array();
 
-	public function mezclar() {
-		return TRUE;
-	}
-
-	public function cortar() {
-		return TRUE;
-	}
-
 	public function cantidadDeCartas(){
 		return $this->cantidadCartas;
 	}
@@ -38,7 +30,7 @@ class Mazo {
 		if($this->tieneCartas()){
 			$carta = $this->cartas[$this->cantidadCartas - 1];
 			$this->cantidadCartas--;
-			$this->cartas = array_values($this->cartas);	//re indexar
+			$this->cartas = array_values($this->cartas);	//re-indexar
 			return $carta;
 		}
 		
@@ -70,6 +62,14 @@ class Mazo {
 	public function cortar(){
 
 		if($this->tieneCartas()){
+			$cartas = $this->cartas;
+      
+			$limite = rand(1, $this->cantidadCartas-1);
+		  	$mitad1 = array_slice($cartas, 0, $limite);
+		  	$mitad2 = array_slice($cartas, $limite);
+		  	$final = array_merge($mitad2,$mitad1);
+
+		  	$this->cartas = $final;
 
 			return True;
 		}
