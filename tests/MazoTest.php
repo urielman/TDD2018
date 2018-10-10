@@ -64,10 +64,10 @@ class MazoTest extends TestCase {
 		$this->assertEquals($mazo->cantidadDeCartas(), 4);
 
         $mazoPrueba = array($carta, $carta2, $carta3, $carta4);
-        $this->assertEquals($mazo->obtenerMazo, $mazoPrueba);
+        $this->assertEquals($mazo->obtenerMazo(), $mazoPrueba);
         
 		$this->assertTrue($mazo->mezclar());
-        $this->assertNotEquals($mazo->obtenerMazo, $mazoPrueba);
+        $this->assertNotEquals($mazo->obtenerMazo(), $mazoPrueba);
 	}
 
 	public function testCortar(){
@@ -83,10 +83,10 @@ class MazoTest extends TestCase {
 		$this->assertEquals($mazo->cantidadDeCartas(), 4);
 
         $mazoPrueba = array($carta, $carta2, $carta3, $carta4);
-        $this->assertEquals($mazo->obtenerMazo, $mazoPrueba);
+        $this->assertEquals($mazo->obtenerMazo(), $mazoPrueba);
         
 		$this->assertTrue($mazo->cortar());
-        $this->assertNotEquals($mazo->obtenerMazo, $mazoPrueba);
+        $this->assertNotEquals($mazo->obtenerMazo(), $mazoPrueba);
 
 
 		$this->assertNotEquals($mazo->obtenerCarta(), $carta4); //la primer carta no puede ser la misma que antes
