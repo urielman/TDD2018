@@ -76,4 +76,11 @@ class Mazo {
 		return False;
 	}
 
+	public function obtenerMazo(){
+		if($this->tieneCartas()){
+			return $this->cartas;
+		}
+		return FALSE;
+	}
+
 }
