@@ -45,4 +45,35 @@ class Mazo {
 		return FALSE;
 	}
 
+	public function mezclar(){
+
+		if($this->tieneCartas()){
+
+			$cartasMezcladas = $this->cartas;
+		 	
+			if(shuffle($cartasMezcladas){
+
+			//me aseguro de que el mezclado no sea igual que la posicion original de las cartas
+ 		 	if($this->cartas == $cartasMezcladas) return $this->mezclar();
+     			$this->cartas = $cartasMezcladas;
+
+      		return TRUE;
+   			}
+
+    	return FALSE;
+
+		}
+		return False;
+		
+	}
+
+	public function cortar(){
+
+		if($this->tieneCartas()){
+
+			return True;
+		}
+		return False;
+	}
+
 }
