@@ -29,13 +29,25 @@ class MazoTest extends TestCase {
 		$this->assertEquals($mazo->cantidadDeCartas(), 0);
 	}
  
-/*
+
 	public function testObtenerCartaDelMazo(){
 		$mazo = new Mazo;
-		$carta = $mazo->obtenerCarta();
-		$this->assertEquals($carta, );
+		$carta = new Espanola("trebol","7");
+		$carta2 = new Espanola("espada","1");
+		$this->assertTrue($mazo->agregarCarta($carta));	
+		$this->assertTrue($mazo->agregarCarta($carta2));
+		$this->assertEquals($mazo->cantidadDeCartas(), 2);
+	
+		$this->assertEquals($carta2, $mazo->obtenerCarta());
+		$this->assertEquals($mazo->cantidadDeCartas(), 1);
+
+		$this->assertEquals($carta, $mazo->obtenerCarta());
+		$this->assertEquals($mazo->cantidadDeCartas(), 0);
+
+		$this->assertFalse($mazo->obtenerCarta());	
+
 	}
-	*/
+	
 
 	public function testAgregarCarta(){
 		$mazo = new Mazo;

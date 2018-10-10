@@ -32,4 +32,17 @@ class Mazo {
     	return FALSE;
   	}
 
+//devuelve la ult carta del mazo, y la saca del mazo.
+	public function obtenerCarta(){
+
+		if($this->tieneCartas()){
+			$carta = $this->cartas[$this->cantidadCartas - 1];
+			$this->cantidadCartas--;
+			$this->cartas = array_values($this->cartas);	//re indexar
+			return $carta;
+		}
+		
+		return FALSE;
+	}
+
 }
