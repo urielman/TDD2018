@@ -26,7 +26,7 @@ class MazoTest extends TestCase {
 
 	public function testCantidadDeCartas(){
 		$mazo = new Mazo;
-		$this->assertEquals($mazo->cantidadDeCartas(), 50);
+		$this->assertEquals($mazo->cantidadDeCartas(), 0);
 	}
  
 /*
