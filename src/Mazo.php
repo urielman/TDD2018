@@ -6,6 +6,8 @@ class Mazo {
 
 	protected $cantidadCartas = 0;
 
+	protected $cartas = array();
+
 	public function mezclar() {
 		return TRUE;
 	}
@@ -15,11 +17,19 @@ class Mazo {
 	}
 
 	public function cantidadDeCartas(){
-		return 50;
+		return $this->cantidadCartas;
 	}
 
 	public function tieneCartas(){
 		return $this->cantidadCartas != 0;
 	}
+
+	public function agregarCarta($carta){
+		if($this->cartas[] = $carta) {
+			$this->cantidadCartas++;
+		  	return TRUE;
+		}
+    	return FALSE;
+  	}
 
 }

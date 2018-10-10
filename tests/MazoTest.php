@@ -40,7 +40,8 @@ class MazoTest extends TestCase {
 	public function testAgregarCarta(){
 		$mazo = new Mazo;
 		$carta = new Espanola("trebol","7");
-		$this->assertTrue($mazo->agregarCarta($carta));		
+		$this->assertTrue($mazo->agregarCarta($carta));	
+		$this->assertEquals($mazo->cantidadDeCartas(), 1);	
 	}
 
 	public function testTieneCartas(){
