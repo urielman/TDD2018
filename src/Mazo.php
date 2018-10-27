@@ -17,12 +17,9 @@ class Mazo {
 	}
 
 	public function agregarCarta($carta) {
-		if ($this->cartas[] = $carta) {
-			$this->cantidadCartas++;
-		  	return TRUE;
-		}
-    	return FALSE;
-  	}
+		$this->cartas[] = $carta;
+		$this->cantidadCartas++;
+  }
 
 //devuelve la ult carta del mazo, y la saca del mazo.
 	public function obtenerCarta() {
