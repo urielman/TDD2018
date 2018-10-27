@@ -57,6 +57,9 @@ class MazoTest extends TestCase {
 		$carta2 = new Espanola("espada","1");
 		$carta3 = new Espanola("basto","1");
 		$carta4 = new Espanola("oro","7");
+		//caso con mazo vacio
+		$this->assertFalse($mazo->mezclar());
+		
 	    $mazo->agregarCarta($carta);	
         $mazo->agregarCarta($carta2);
 		$mazo->agregarCarta($carta3);
@@ -76,9 +79,10 @@ class MazoTest extends TestCase {
 		$carta2 = new Espanola("espada","1");
 		$carta3 = new Espanola("basto","1");
 		$carta4 = new Espanola("oro","7");
-
+		//caso con mazo vacio
 		$this->assertFalse($mazo->obtenerMazo());
 		$this->assertFalse($mazo->cortar());
+
 	    $mazo->agregarCarta($carta);	
         $mazo->agregarCarta($carta2);
 		$mazo->agregarCarta($carta3);
