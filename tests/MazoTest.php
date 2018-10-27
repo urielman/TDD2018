@@ -78,6 +78,7 @@ class MazoTest extends TestCase {
 		$carta4 = new Espanola("oro","7");
 
 		$this->assertFalse($mazo->obtenerMazo());
+		$this->assertFalse($mazo->cortar());
 	    $mazo->agregarCarta($carta);	
         $mazo->agregarCarta($carta2);
 		$mazo->agregarCarta($carta3);
