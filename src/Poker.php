@@ -2,7 +2,7 @@
 
 namespace TDD;
 
-class Poker extends Cartas{
+class Poker extends Cartas {
 
 }
 
