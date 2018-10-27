@@ -36,7 +36,7 @@ class Mazo {
 
 	public function mezclar() {
 
-		if ($this->tieneCartas()) {
+		if ($this->cantidadDeCartas() > 1) {
 
 			$cartasMezcladas = $this->cartas;
 		 	
@@ -59,7 +59,7 @@ class Mazo {
 
 	public function cortar() {
 
-		if ($this->tieneCartas()) {
+		if ($this->cantidadDeCartas() > 1) {
 			$cartas = $this->cartas;
       
 			$limite = rand(1, $this->cantidadCartas - 1);
