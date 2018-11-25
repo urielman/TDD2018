@@ -18,6 +18,7 @@ class MazoTest extends TestCase {
 		$mazo = new Mazo;
 		$this->assertEquals($mazo->cantidadDeCartas(), 0);
 	}
+
 	/**
 	 * Valida que se crea un mazo de cartas espanolas, de 50 cartas
 	 *
@@ -31,6 +32,16 @@ class MazoTest extends TestCase {
 
 		$carta = new Espanola("Copa", 7);
 		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+
+		$carta = new Espanola("Espada", 1);
+		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+		
+		$carta = new Espanola("Oro", 10);
+		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+		
+		$carta = new Espanola("Basto", 12);
+		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+
 	}
 
 	/**
@@ -42,12 +53,22 @@ class MazoTest extends TestCase {
 		$this->assertEquals($mazo->cantidadDeCartas(), 0);		
 
 		$mazo->crearMazoPoker();
-		$this->assertEquals($mazo->cantidadDeCartas(), 40);	
+		$this->assertEquals($mazo->cantidadDeCartas(), 52);	
 
-		$carta = new Poker("Trebol", 7);
+		$carta = new Poker("Trebol", "A");
+		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+
+		$carta = new Poker("Diamante", "K");
+		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+
+		$carta = new Poker("Corazon", 7);
 		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
 	}
 
+	/**
+	 * Valida que se obtiene la ultima carta y se elimina del mazo
+	 *
+	 */
 	public function testObtenerCartaDelMazo(){
 		$mazo = new Mazo;
 		$carta = new Espanola("Copa","7");
@@ -66,7 +87,10 @@ class MazoTest extends TestCase {
 
 	}
 	
-
+	/**
+	 * Valida que se agrega una carta al mazo
+	 *
+	 */
 	public function testAgregarCarta(){
 		$mazo = new Mazo;
 		$carta = new Espanola("Copa","7");
@@ -74,11 +98,19 @@ class MazoTest extends TestCase {
 		$this->assertEquals($mazo->cantidadDeCartas(), 1);	
 	}
 
+	/**
+	 * Valida que un mazo vacio no tiene cartas
+	 *
+	 */
 	public function testTieneCartas(){
 		$mazo = new Mazo;
 		$this->assertFalse($mazo->tieneCartas());
 	}
 
+	/**
+	 * Valida que un mazo se mezcla satisfactoriamente
+	 *
+	 */
 	public function testMezclar(){
 		$mazo = new Mazo;
 		$carta = new Espanola("Copa","4");
@@ -103,6 +135,10 @@ class MazoTest extends TestCase {
         $this->assertNotEquals($mazo->obtenerMazo(), $mazoPrueba);
 	}
 
+	/**
+	 * Valida que un mazo se corta satisfactoriamente
+	 *
+	 */
 	public function testCortar(){
 		$mazo = new Mazo;
 		$carta = new Espanola("Copa","4");
