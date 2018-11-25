@@ -49,7 +49,7 @@ class Mazo {
 
 	public function crearMazoPoker(){
 		$this->cartas = array();
-		$this->cantidadDeCartas = 0;
+		$this->cantidadCartas = 0;
 
 		$carta = new Poker("Diamante", "A");
         $this->agregarCarta($carta);
