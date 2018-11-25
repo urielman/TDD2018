@@ -29,13 +29,14 @@ class MazoTest extends TestCase {
 		$mazo->crearMazoEspanolas();
 		$this->assertEquals($mazo->cantidadDeCartas(), 50);	
 
+		$carta = new Espanola("Copa", 7);
 		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
 	}
 
 	public function testObtenerCartaDelMazo(){
 		$mazo = new Mazo;
-		$carta = new Espanola("trebol","7");
-		$carta2 = new Espanola("espada","1");
+		$carta = new Espanola("Copa","7");
+		$carta2 = new Espanola("Espada","1");
 		$mazo->agregarCarta($carta);	
 		$mazo->agregarCarta($carta2);
 		$this->assertEquals($mazo->cantidadDeCartas(), 2);
@@ -53,7 +54,7 @@ class MazoTest extends TestCase {
 
 	public function testAgregarCarta(){
 		$mazo = new Mazo;
-		$carta = new Espanola("trebol","7");
+		$carta = new Espanola("Copa","7");
 		$mazo->agregarCarta($carta);	
 		$this->assertEquals($mazo->cantidadDeCartas(), 1);	
 	}
@@ -65,10 +66,10 @@ class MazoTest extends TestCase {
 
 	public function testMezclar(){
 		$mazo = new Mazo;
-		$carta = new Espanola("trebol","4");
-		$carta2 = new Espanola("espada","1");
-		$carta3 = new Espanola("basto","1");
-		$carta4 = new Espanola("oro","7");
+		$carta = new Espanola("Copa","4");
+		$carta2 = new Espanola("Espada","1");
+		$carta3 = new Espanola("Basto","1");
+		$carta4 = new Espanola("Oro","7");
 		//caso con mazo vacio
 		$this->assertFalse($mazo->mezclar());
 		//caso con mazo de una carta
@@ -89,10 +90,10 @@ class MazoTest extends TestCase {
 
 	public function testCortar(){
 		$mazo = new Mazo;
-		$carta = new Espanola("trebol","4");
-		$carta2 = new Espanola("espada","1");
-		$carta3 = new Espanola("basto","1");
-		$carta4 = new Espanola("oro","7");
+		$carta = new Espanola("Copa","4");
+		$carta2 = new Espanola("Espada","1");
+		$carta3 = new Espanola("Basto","1");
+		$carta4 = new Espanola("Oro","7");
 		//caso con mazo vacio
 		$this->assertFalse($mazo->obtenerMazo());
 		$this->assertFalse($mazo->cortar());
