@@ -23,7 +23,7 @@ class Mazo {
 
   	public function crearMazoEspanolas(){
 		$this->cartas = array();
-		$this->cantidadDeCartas = 0;
+		$this->cantidadCartas = 0;
 
 		for ($contador = 1; $contador < 13; $contador++) {
             $carta = new Espanola("Oro", $contador);
