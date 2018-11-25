@@ -21,6 +21,32 @@ class Mazo {
 		$this->cantidadCartas++;
   }
 
+  	public function crearMazoEspanolas(){
+		$this->cartas = array();
+		$this->cantidadDeCartas = 0;
+
+		for ($contador = 1; $contador < 13; $contador++) {
+            $carta = new Espanola("Oro", $contador);
+            $this->agregarCarta($carta);
+        }
+        for ($contador = 1; $contador < 13; $contador++) {
+			$carta = new Espanola("Copa", $contador);
+			$this->agregarCarta($carta);
+        }
+        for ($contador = 1; $contador < 13; $contador++) {
+			$carta = new Espanola("Basto", $contador);
+			$this->agregarCarta($carta);
+        }
+        for ($contador = 1; $contador < 13; $contador++) {
+			$carta = new Espanola("Espada", $contador);
+			$this->agregarCarta($carta);
+        }
+		$carta = new Espanola("Joker", 1);
+		$this->agregarCarta($carta);
+		$carta = new Espanola("Joker", 2);
+		$this->agregarCarta($carta);
+	  }
+
 //devuelve la ult carta del mazo, y la saca del mazo.
 	public function obtenerCarta() {
 
