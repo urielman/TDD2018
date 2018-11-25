@@ -47,6 +47,63 @@ class Mazo {
 		$this->agregarCarta($carta);
 	  }
 
+	public function crearMazoPoker(){
+		$this->cartas = array();
+		$this->cantidadDeCartas = 0;
+
+		$carta = new Poker("Diamante", "A");
+        $this->agregarCarta($carta);
+		for ($contador = 2; $contador < 11; $contador++) {
+            $carta = new Poker("Diamante", $contador);
+            $this->agregarCarta($carta);
+        }
+        $carta = new Poker("Diamante", "J");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Diamante", "Q");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Diamante", "K");
+		$this->agregarCarta($carta);
+
+		$carta = new Poker("Corazon", "A");
+        $this->agregarCarta($carta);
+        for ($contador = 2; $contador < 11; $contador++) {
+            $carta = new Poker("Corazon", $contador);
+            $this->agregarCarta($carta);
+        }
+        $carta = new Poker("Corazon", "J");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Corazon", "Q");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Corazon", "K");
+		$this->agregarCarta($carta);
+
+		$carta = new Poker("Trebol", "A");
+        $this->agregarCarta($carta);
+        for ($contador = 2; $contador < 11; $contador++) {
+            $carta = new Poker("Trebol", $contador);
+            $this->agregarCarta($carta);
+        }
+        $carta = new Poker("Trebol", "J");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Trebol", "Q");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Trebol", "K");
+		$this->agregarCarta($carta);
+
+		$carta = new Poker("Pica", "A");
+        $this->agregarCarta($carta);
+        for ($contador = 2; $contador < 11; $contador++) {
+            $carta = new Poker("Pica", $contador);
+            $this->agregarCarta($carta);
+        }
+        $carta = new Poker("Pica", "J");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Pica", "Q");
+        $this->agregarCarta($carta);
+        $carta = new Poker("Pica", "K");
+        $this->agregarCarta($carta);
+	}
+
 //devuelve la ult carta del mazo, y la saca del mazo.
 	public function obtenerCarta() {
 
@@ -68,16 +125,10 @@ class Mazo {
 		 	
 			if (shuffle($cartasMezcladas)) {
 
-			  //me aseguro de que el mezclado no sea igual que la posicion original de las cartas
-        if ($this->cartas == $cartasMezcladas) {
-          return $this->mezclar();
-        }
-
 		 		$this->cartas = $cartasMezcladas;
 
-      	return TRUE;
+      			return TRUE;
    			}
-
 		}
 		return FALSE;
 		
