@@ -18,7 +18,19 @@ class MazoTest extends TestCase {
 		$mazo = new Mazo;
 		$this->assertEquals($mazo->cantidadDeCartas(), 0);
 	}
- 
+	/**
+	 * Valida que se crea un mazo de cartas espanolas, de 50 cartas
+	 *
+	 */
+	public function testCrearMazoEspanolas(){
+		$mazo = new Mazo;
+		$this->assertEquals($mazo->cantidadDeCartas(), 0);		
+
+		$mazo->crearMazoEspanolas();
+		$this->assertEquals($mazo->cantidadDeCartas(), 50);	
+
+		$this->assertTrue(in_array($carta, $mazo->obtenerMazo()));
+	}
 
 	public function testObtenerCartaDelMazo(){
 		$mazo = new Mazo;
